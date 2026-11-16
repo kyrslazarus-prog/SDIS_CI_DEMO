@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Croix décisionnelle</title>
+
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/croix.css">
+
+</head>
+
+<body>
+<script src="../js/session.js"></script>
+<div class="container">
+
+    <h1>Croix décisionnelle</h1>
+
+       <div
+        id="modeManagement"
+        style="display:none;">
+
+        ⚠ Mode Management - Intervention terminée
+
+    </div> 
+
+    <h2 id="typeIntervention"></h2>
+
+
+
+
+    <div class="pense-bete">
+        Apprécier → Sécuriser → Sauver → Tenir → Protéger → Maîtriser
+    </div>
+
+    <div id="zoneCroix">
+
+        <canvas id="dessin"
+                width="1000"
+                height="700">
+        </canvas>
+
+        <button id="prioHaut" class="priorite">?</button>
+        <button id="prioDroite" class="priorite">?</button>
+        <button id="prioBas" class="priorite">?</button>
+        <button id="prioGauche" class="priorite">?</button>
+
+    </div>
+    <div class="actions">
+
+        <a
+            class="btn"
+            href="contacts.html">
+
+            Contacts
+
+        </a>
+
+        <a
+            class="btn"
+            href="croquis.html">
+
+            Croquis
+
+        </a>
+
+        <a
+            class="btn"
+            href="../index.html">
+
+            Retour
+
+        </a>
+
+    </div>
+
+    <hr>
+
+    <div class="actions-fin-intervention">
+
+        <button
+            type="button"
+            class="btn-terminer"
+            onclick="terminerInterventionCourante()">
+
+            Terminer l'intervention
+
+        </button>
+
+    </div>
+    <br>
+
+    <!--
+    <a class="btn"
+       href="constatations.html">
+       constatations
+    </a>
+    -->
+
+</div>
+
+<script src="../js/intervention.js"></script>
+<script src="../js/storage.js"></script>
+<script src="../js/croix.js"></script>
+
+</body>
+</html>

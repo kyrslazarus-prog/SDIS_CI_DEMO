@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvelle intervention</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<script src="../js/session.js"></script>
+<div class="container">
+
+    <h1>Nouvelle intervention</h1>
+
+    <div class="formulaire-intervention">
+        <label>Type d'intervention</label>
+        <select 
+            id="typeIntervention"
+            class="select-intervention">
+
+            <option>Feu</option>
+            <option>Inondation</option>
+            <option>Sauvetage</option>
+            <option>Aide au portage</option>
+            <option>Ascenseur bloqué</option>
+
+        </select>
+    </div>
+
+    <button onclick="creerIntervention()">
+        Créer
+    </button>
+
+</div>
+
+<script src="../js/storage.js"></script>
+<script src="../js/intervention.js"></script>
+
+</body>
+</html>
