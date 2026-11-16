@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chef d'intervention</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="user-bar">
+
+        <span id="currentUser"></span>
+
+        <button
+            type="button"
+            class="btn-logout"
+            onclick="seDeconnecter()">
+
+            Déconnexion
+
+        </button>
+
+    </div>
+
+
+    <div class="bandeau-demo">
+        🚧 VERSION DE DÉMONSTRATION 🚧
+        <br>
+        Ne pas utiliser avec des données réelles.
+    </div>
+
+    <h1>Aide à la gestion d'intervention</h1>
+
+
+    <a
+        class="btn"
+        href="pages/nouvelle-intervention.html">
+
+        Nouvelle intervention
+
+    </a>
+
+    <h2>
+        Interventions ouvertes
+    </h2>
+    <div class="zone-filtres">
+
+        <label for="filtreType">
+            Type d'intervention :
+        </label>
+
+        <select id="filtreType">
+            <option value="">Tous</option>
+            <option value="Feu">Feu</option>
+            <option value="Inondation">Inondation</option>
+            <option value="Sauvetage">Sauvetage</option>
+            <option value="Aide au portage">Aide au portage</option>
+            <option value="Ascenseur bloqué">Ascenseur bloqué</option>
+        </select>
+
+        <label class="checkbox-cloturees">
+            <input
+                type="checkbox"
+                id="afficherCloturees">
+            Afficher les interventions clôturées
+        </label>
+
+    </div>
+    
+    <div id="listeInterventions">
+
+    </div>
+
+</div>
+
+<script src="js/session.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+
+<hr>
+<footer class="version"></footer>
+<script src="js/version.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+<script src="../js/session.js"></script>
+<div class="container">
+
+    <h1 id="titreIntervention">
+        Contacts
+    </h1>
+
+    <div class="contact-form">
+
+        <label for="typeContact">
+            Type
+        </label>
+
+        <select id="typeContact">
+            <option>Victime</option>
+            <option>Témoin</option>
+            <option>Requérant</option>
+            <option>Propriétaire</option>
+            <option>Locataire</option>
+            <option>Responsable</option>
+            <option>Autre</option>
+        </select>
+
+        <label for="nomPrenom">
+            Nom Prénom
+        </label>
+
+        <input
+            type="text"
+            id="nomPrenom">
+
+        <label for="adresse">
+            Adresse
+        </label>
+
+        <input
+            type="text"
+            id="adresse">
+
+        <label for="telephone">
+            Téléphone
+        </label>
+
+        <input
+            type="text"
+            id="telephone">
+
+        <label>
+            Notes manuscrites
+        </label>
+
+        <canvas
+            id="noteContact"
+            width="800"
+            height="250">
+        </canvas>
+
+        <br>
+
+        <button
+            type="button"
+            onclick="effacerNote()">
+
+            Effacer la note
+
+        </button>
+
+        <button onclick="ajouterContact()">
+            Ajouter
+        </button>
+
+    </div>
+
+    <br>
+
+    <a
+        class="btn"
+        href="croix-decisionnelle.html">
+
+        Retour
+
+    </a>
+
+
+    <hr>
+
+    <h2>
+        Contacts enregistrés
+    </h2>
+
+    <div id="listeContacts"></div>
+</div>
+
+<script src="../js/storage.js"></script>
+<script src="../js/intervention.js"></script>
+<script src="../js/contacts.js"></script>
+
+</body>
+
+</html>
