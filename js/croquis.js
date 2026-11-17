@@ -63,9 +63,15 @@ function debutDessin(e){
 
     ctx.beginPath();
 
-    ctx.moveTo(
-        e.offsetX,
-        e.offsetY
+    const pos =
+        getCanvasPosition(
+            canvas,
+            e
+        );
+
+    ctx.lineTo(
+        pos.x,
+        pos.y
     );
 }
 
@@ -80,9 +86,15 @@ function dessiner(e){
 
     ctx.lineCap = "round";
 
+    const pos =
+        getCanvasPosition(
+            canvas,
+            e
+        );
+
     ctx.lineTo(
-        e.offsetX,
-        e.offsetY
+        pos.x,
+        pos.y
     );
 
     ctx.stroke();
