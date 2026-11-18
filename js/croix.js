@@ -70,7 +70,15 @@ function dessinerCroix() {
     ctx.stroke();
 }
 function debutDessin(e){
+console.log(
+    "pointer",
+    e.pointerType
+);
 
+    canvas.addEventListener(
+        "pointercancel",
+        finDessin
+    );
     dessin = true;
 
     const pos =
@@ -109,8 +117,15 @@ function dessiner(e){
     ctx.stroke();
 }
 function finDessin(){
-    console.log("FIN");
+
     dessin = false;
+
+    intervention.dessinCroix =
+        canvas.toDataURL(
+            "image/png"
+        );
+
+    sauvegarderIntervention();
 }
 /************************************************************
  * INITIALISATION
