@@ -73,25 +73,24 @@ function debutDessin(e){
 
     dessin = true;
 
-    ctx.beginPath();
-
     const pos =
         getCanvasPosition(
             canvas,
             e
         );
 
+    ctx.beginPath();
+
     ctx.moveTo(
         pos.x,
         pos.y
     );
-
-    // Debug
-    console.log("Type pointeur :", e.pointerType);
 }
 function dessiner(e){
 
-    if(!dessin) return;
+    if(!dessin){
+        return;
+    }
 
     ctx.lineWidth = 3;
     ctx.lineCap = "round";
@@ -102,7 +101,7 @@ function dessiner(e){
             e
         );
 
-    ctx.moveTo(
+    ctx.lineTo(
         pos.x,
         pos.y
     );
@@ -110,7 +109,7 @@ function dessiner(e){
     ctx.stroke();
 }
 function finDessin(){
-
+    console.log("FIN");
     dessin = false;
 }
 /************************************************************
