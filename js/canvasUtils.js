@@ -19,3 +19,16 @@ function getCanvasPosition(
             / rect.height
     };
 }
+
+function effacerCanvas(
+    canvas,
+    ctx
+){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+}
