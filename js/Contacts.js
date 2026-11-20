@@ -2,6 +2,8 @@ chargerIntervention()
 afficherTitre();
 afficherContacts();
 
+
+
 const canvas =
     document.getElementById(
         "noteContact"
