@@ -32,3 +32,5 @@ function effacerCanvas(
         canvas.height
     );
 }
+
+console.log("CanvasUtils.js chargé");

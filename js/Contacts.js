@@ -285,4 +285,4 @@ function supprimerContact(id){
     afficherContacts();
 }
 
-
+console.log("Contacts.js chargé");
