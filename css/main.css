@@ -260,3 +260,12 @@ canvas {
 
     -ms-touch-action: none;
 }
+
+.footer-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:20px;
+}
