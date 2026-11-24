@@ -470,7 +470,26 @@ function ManagementIntervention(numero){
         "pages/croix-decisionnelle.html";
 }
 function RapportIntervention(numero){
-    console.log("PDF");
+    const interventions =
+        chargerInterventions();
+
+    const intervention =
+        interventions.find(
+            x => x.numero == numero
+        );
+
+    if(!intervention){
+
+        alert(
+            "Intervention introuvable"
+        );
+
+        return;
+    }
+
+    genererRapportPDF(
+        intervention
+    );
 }
 function ConsulterIntervention(numero){
     console.log("Consulter");

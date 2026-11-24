@@ -393,4 +393,5 @@ function terminerInterventionCourante(){
         "../index.html";
 }
 
+
 console.log("croix.js chargé");

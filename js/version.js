@@ -3,8 +3,10 @@
 // ====================================================
 
 const VERSION =
-    "0.6.1-beta";
+    "0.7.0-beta";
 
+const APP_NAME =
+    "CI Assistant";
 // ====================================================
 // Affichage automatique
 // ====================================================
@@ -25,5 +27,6 @@ document.addEventListener(
 );
 
 console.log(
-    `CI Assistant v${VERSION}`
+    `${APP_NAME} ${VERSION}`
 );
+

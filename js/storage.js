@@ -65,4 +65,6 @@ function prochainNumeroIntervention(){
 
     return numero;
 }
+
+
 console.log("Storage.js chargé");
