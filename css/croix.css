@@ -1,7 +1,8 @@
 #zoneCroix{
+
+    flex:1;
+
     position:relative;
-    width:100%;
-    max-width:1000px;
 }
 
 canvas{
@@ -55,4 +56,14 @@ canvas{
     left:50%;
     top:50%;
     transform:translate(-150%,-50%);
+}
+
+.zone-croix{
+
+    flex:1;
+}
+
+.palette-pictogrammes{
+    width:220px;
+    flex-shrink:0;
 }

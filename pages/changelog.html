@@ -29,8 +29,115 @@
 
     <p>
         Version actuelle :
-        <strong>0.7.0</strong>
+        <strong>0.8.0</strong>
     </p>
+
+    <hr>
+
+    <h3>
+        Version 0.8.0
+    </h3>
+
+    <p>
+        Ajout des pictogrammes opérationnels sur la croix décisionnelle afin de représenter rapidement les éléments importants d'une intervention.
+    </p>
+
+    <ul>
+
+        <li>
+            ✅ Mise en place d'une bibliothèque de pictogrammes opérationnels
+        </li>
+
+        <li>
+            ✅ Organisation des pictogrammes par type d'intervention
+            <ul>
+                <li>🔥 Feu</li>
+                <li>💧 Inondation</li>
+                <li>🛟 Sauvetage</li>
+            </ul>
+        </li>
+
+        <li>
+            ✅ Création d'une catégorie commune de pictogrammes
+            <ul>
+                <li>👤 Victime (VIC)</li>
+                <li>🚒 Engin (ENG)</li>
+                <li>🚪 Accès (ACC)</li>
+                <li>⚡ Danger électrique (ELE)</li>
+                <li>🏢 Niveau (R+X)</li>
+            </ul>
+        </li>
+
+        <li>
+            ✅ Ajout de la palette de pictogrammes sur la page de la croix décisionnelle
+        </li>
+
+        <li>
+            ✅ Sélection d'un pictogramme depuis la palette
+        </li>
+
+        <li>
+            ✅ Positionnement des pictogrammes sur la croix décisionnelle
+        </li>
+
+        <li>
+            ✅ Sauvegarde automatique des pictogrammes dans l'intervention
+        </li>
+
+        <li>
+            ✅ Préparation du support des niveaux (RDC, R+1, R+2, Sous-sol...)
+        </li>
+
+        <li>
+            ✅ Mise en place de la structure de données permettant les futures observations automatiques
+        </li>
+
+    </ul>
+
+    <h4>
+        Améliorations techniques
+    </h4>
+
+    <ul>
+
+        <li>
+            ✅ Création de <code>pictogrammes.js</code>
+        </li>
+
+        <li>
+            ✅ Création de la propriété
+            <code>intervention.pictogrammes</code>
+        </li>
+
+        <li>
+            ✅ Conservation des coordonnées X/Y de chaque pictogramme
+        </li>
+
+        <li>
+            ✅ Préparation de l'export PDF des pictogrammes
+        </li>
+
+    </ul>
+
+    <h4>
+        Correctifs
+    </h4>
+
+    <ul>
+
+        <li>
+            ✅ Correction du positionnement tactile sur mobile et tablette
+        </li>
+
+        <li>
+            ✅ Centralisation des fonctions Canvas dans <code>canvasUtils.js</code>
+        </li>
+
+        <li>
+            ✅ Correction de plusieurs problèmes de sauvegarde liés aux dessins et aux nouveaux pictogrammes
+        </li>
+
+    </ul>
 
     <hr>
 
@@ -147,16 +254,33 @@
         Prochaine version prévue
     </h3>
 
-    <p>
-        <strong>Version 0.8.0</strong>
-    </p>
+    <h4>
+        Prévision Version 0.9.0
+    </h4>
 
     <ul>
-        <li>🧪 Intégration des retours des bêta-testeurs</li>
-        <li>🧪 Améliorations ergonomiques tablette</li>
-        <li>🧪 Évolutions du rapport PDF</li>
-    </ul>
 
+        <li>
+            🚧 Affichage graphique complet des pictogrammes sur la croix
+        </li>
+
+        <li>
+            🚧 Déplacement et suppression des pictogrammes
+        </li>
+
+        <li>
+            🚧 Export PDF des pictogrammes
+        </li>
+
+        <li>
+            🚧 Gestion avancée des niveaux R+X
+        </li>
+
+        <li>
+            🚧 Préparation de la génération automatique des observations opérationnelles
+        </li>
+
+    </ul>
     <br>
 
     <a
