@@ -269,3 +269,66 @@ canvas {
 
     margin-top:20px;
 }
+
+.palette-pictogrammes{
+
+    width:220px;
+
+    min-width:220px;
+
+    border:1px solid #ccc;
+
+    padding:10px;
+
+    background:white;
+}
+
+#listePictogrammes{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+.picto{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px;
+
+    border:1px solid #ddd;
+
+    border-radius:4px;
+
+    cursor:pointer;
+}
+
+.picto-icone{
+    font-size:24px;
+}
+
+.picto-code{
+    font-size:12px;
+    font-weight:bold;
+}
+
+.zone-travail{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+}
+
+.selectionne{
+
+    border:2px solid #0066ff !important;
+
+    background:#dcecff !important;
+}

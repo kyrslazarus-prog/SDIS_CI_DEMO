@@ -16,8 +16,7 @@
 <div class="container">
 
     <h1>Croix décisionnelle</h1>
-
-       <div
+    <div
         id="modeManagement"
         style="display:none;">
 
@@ -26,29 +25,32 @@
     </div> 
 
     <h2 id="typeIntervention"></h2>
-
-
-
-
     <div class="pense-bete">
         Apprécier → Sécuriser → Sauver → Tenir → Protéger → Maîtriser
     </div>
 
-    <div id="zoneCroix">
+    <div class="zone-travail">
+        <div id="zoneCroix">
+            <canvas id="dessin"
+                    width="1000"
+                    height="700">
+            </canvas>
 
-        <canvas id="dessin"
-                width="1000"
-                height="700">
-        </canvas>
+            <button id="prioHaut" class="priorite">?</button>
+            <button id="prioDroite" class="priorite">?</button>
+            <button id="prioBas" class="priorite">?</button>
+            <button id="prioGauche" class="priorite">?</button>
+        </div>
+        <div class="palette-pictogrammes">
 
-        <button id="prioHaut" class="priorite">?</button>
-        <button id="prioDroite" class="priorite">?</button>
-        <button id="prioBas" class="priorite">?</button>
-        <button id="prioGauche" class="priorite">?</button>
+            <h3>Pictogrammes</h3>
 
+            <div id="listePictogrammes"></div>
+
+        </div>
     </div>
-    <div class="actions">
 
+    <div class="actions">
         <a
             class="btn"
             href="contacts.html">
@@ -72,7 +74,6 @@
             Retour
 
         </a>
-
     </div>
 
     <hr>
@@ -103,8 +104,8 @@
 <script src="../js/intervention.js"></script>
 <script src="../js/storage.js"></script>
 <script src="../js/canvasUtils.js"></script>
+<script src="../js/pictogrammes.js"></script>
 <script src="../js/croix.js"></script>
-
 
 </body>
 </html>

@@ -132,6 +132,7 @@ function finDessin(){
  ************************************************************/
 
 dessinerCroix();
+afficherPictogrammesCroix();
 
 /************************************************************
  * RESTAURATION DU CROQUIS
@@ -212,6 +213,10 @@ canvas.addEventListener(
     }
 );
 
+canvas.addEventListener(
+    "click",
+    placerPictogramme
+);
 /************************************************************
  * Priorite
  ************************************************************/
@@ -393,5 +398,113 @@ function terminerInterventionCourante(){
         "../index.html";
 }
 
+function placerPictogramme(e){
+
+    if(!pictogrammeSelectionne){
+
+        return;
+    }
+
+    const pos =
+        getCanvasPosition(
+            canvas,
+            e
+        );
+
+    console.log("intervention :", intervention);
+
+    if(!intervention.pictogrammes){
+
+        console.log(
+            "Création du tableau pictogrammes"
+        );
+
+        intervention.pictogrammes = [];
+    }
+
+    //intervention.pictogrammes.push({
+
+    //    code:
+    //        pictogrammeSelectionne.code,
+
+    //    icone:
+    //        pictogrammeSelectionne.icone,
+
+    //    x: pos.x,
+
+    //    y: pos.y
+
+    //});
+    const pictogramme = {
+
+        code:
+            pictogrammeSelectionne.code,
+
+        icone:
+            pictogrammeSelectionne.icone,
+
+        x: pos.x,
+
+        y: pos.y
+
+    };
+    if(
+        pictogrammeSelectionne.code
+        === "R+X"
+    ){
+
+        pictogramme.valeur =
+            prompt(
+                "Niveau ?\n\nExemples :\nRDC\nR+1\nR+2\nSS-1"
+            );
+
+    }
+    intervention.pictogrammes.push(
+        pictogramme
+    );
+
+
+    sauvegarderIntervention();
+    dessinerCroix();
+    afficherPictogrammesCroix();
+}
+
+function afficherPictogrammesCroix(){
+
+    if(!intervention.pictogrammes){
+        return;
+    }
+
+    ctx.font =
+        "22px Arial";
+
+    intervention.pictogrammes.forEach(p => {
+
+        let texte =
+            p.icone;
+
+        if(
+            p.code === "R+X"
+            &&
+            p.valeur
+        ){
+
+            texte +=
+                " " +
+                p.valeur;
+
+        }
+
+        ctx.fillText(
+            texte,
+            p.x,
+            p.y
+        );
+
+    });
+
+}
+
+afficherPictogrammes();
 
 console.log("croix.js chargé");

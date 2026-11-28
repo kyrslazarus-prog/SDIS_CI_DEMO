@@ -40,6 +40,10 @@ function chargerIntervention()
     const numero = parseInt(getInterventionActive());
     const interventions = chargerInterventions();
 
+    if(!intervention.pictogrammes){
+        intervention.pictogrammes = [];
+    }
+
     intervention = interventions.find(
             x =>  Number(x.numero) === Number(numero)
         );
